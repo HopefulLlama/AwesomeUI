@@ -1,0 +1,30 @@
+{
+  "name": "AwesomeUI",
+  "version": "1.0.0",
+  "homepage": "https://github.com/we-r-llamas/AwesomeUI",
+  "authors": [
+    "HopefulLlama <jonlaw10170@gmail.com>"
+  ],
+  "description": "AngularJS directives to help create an AwesomeUI for your web page",
+  "main": "index.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "AngularJS",
+    "ui"
+  ],
+  "license": "GNU",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.15",
+    "bootstrap": "~3.3.4"
+  }
+}

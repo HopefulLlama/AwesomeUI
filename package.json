@@ -1,0 +1,29 @@
+{
+  "name": "AwesomeUI",
+  "version": "1.0.0",
+  "description": "AngularJS directives to help create an AwesomeUI for your web page",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "express": "^4.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://HopefulLlama@github.com/we-r-llamas/AwesomeUI.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "ui"
+  ],
+  "author": "HopefulLlama",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/we-r-llamas/AwesomeUI/issues"
+  },
+  "homepage": "https://github.com/we-r-llamas/AwesomeUI"
+}
