@@ -10,13 +10,30 @@
 	<script type="text/javascript" src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./lib/angularjs/angular.min.js"></script>
 
+	<link rel="stylesheet" href="example.css">
 	<script type="text/javascript" src="./dist/awesome-ui.js"></script>
 	<script type="text/javascript" src="example.js"></script>
 </head>
 <body ng-app="myApp" ng-controller="ExampleController">	
-	<au-marquee speed="1" refresh="10" direction="'right'">Default AU-Marquee</au-marquee><br/>
-	<au-marquee speed="3" refresh="10" direction="'right'">Fast AU-Marquee</au-marquee><br/>
-	<au-marquee speed="2" refresh="10" direction="'left'">Reverse AU-Marquee</au-marquee><br/>
-	<au-marquee speed="1" refresh="10" direction="'right'">Two AU-Marquees on the same line</au-marquee><au-marquee speed="1" refresh="10" direction="'left'">Another AU-Marquee on the same line</au-marquee>
+	<nav class="no-bottom-margin navbar navbar-default">
+	  	<div class="container">
+	    	<!-- Brand and toggle get grouped for better mobile display -->
+	    	<div class="navbar-header">
+	      		<a class="navbar-brand" href="#">AwesomeUI</a>
+	    	</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="jumbotron customtron">
+		<div class="container">
+  			<h1>AwesomeUI</h1>
+  			<p>AngularJS directives to help create an AwesomeUI for your web page.</p>
+		</div>
+  	</div>
+	<div class="container">
+		<au-marquee speed="1" refresh="10" direction="'right'">Default AU-Marquee</au-marquee><br/>
+		<au-marquee speed="3" refresh="10" direction="'right'">Fast AU-Marquee</au-marquee><br/>
+		<au-marquee speed="2" refresh="10" direction="'left'">Reverse AU-Marquee</au-marquee><br/>
+		<au-marquee speed="1" refresh="10" direction="'right'">Two AU-Marquees on the same line</au-marquee><au-marquee speed="1" refresh="10" direction="'left'">Another AU-Marquee on the same line</au-marquee>
+	</div>
 </body>
 </html>
