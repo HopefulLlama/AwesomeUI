@@ -15,6 +15,13 @@
 					dest: 'dist/awesome-ui.js'
 				}
 			},
+			uglify: {
+		      target: {
+		        files: {
+		          './dist/js/awesome-ui.min.js': ['./dist/awesome-ui.js']
+		        }
+		      }
+		    },
 			watch: {
 				all: {
 					files: ['*.js', '**/*.js'],
@@ -27,8 +34,9 @@
 		grunt.loadNpmTasks('grunt-contrib-jshint');
 		grunt.loadNpmTasks('grunt-contrib-concat');
 		grunt.loadNpmTasks('grunt-contrib-watch');
+		grunt.loadNpmTasks('grunt-contrib-uglify');
 
 		// Define tasks to be called to execute different configs
-		grunt.registerTask('default', ['jshint', 'concat']);
+		grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 	};
 }());
