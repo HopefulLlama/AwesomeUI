@@ -36,10 +36,39 @@
 				<p class="lead">
 					Use the Marquee directive to slide content horizontally across the screen. Just like a really cool news alert!
 				</p>
+				<h2>Example</h2>
+				<p>
+					Use the <code>&lt;au-marquee&gt;</code> along with a <code>speed</code> and a <code>direction</code> attribute to get a scrolling element. The attribute take a number and a string respectively. If passing a literal value directly to <code>direction</code>, it should be done with single quote marks as such: <code>direction="'right'"</code>. 
+				</p>
+
+				<hr />
 				<au-marquee speed="3" direction="'right'">Default AU-Marquee</au-marquee><br/>
 				<au-marquee speed="9" direction="'right'">Fast AU-Marquee</au-marquee><br/>
 				<au-marquee speed="6" direction="'left'">Reverse AU-Marquee</au-marquee><br/>
 				<au-marquee speed="3" direction="'right'">Two AU-Marquees on the same line</au-marquee><au-marquee speed="3" direction="'left'">Another AU-Marquee on the same line</au-marquee>
+				<hr />
+					<div class="well well-sm">
+						<h6>EXAMPLE</h6>
+						<code>
+							&lt;au-marquee speed="3" direction="'right'"&gt;Default AU-Marquee&lt;/au-marquee&gt;&lt;br/&gt;<br />
+							&lt;au-marquee speed="9" direction="'right'"&gt;Fast AU-Marquee&lt;/au-marquee&gt;&lt;br/&gt;<br />
+							&lt;au-marquee speed="6" direction="'left'"&gt;Reverse AU-Marquee&lt;/au-marquee&gt;&lt;br/&gt;<br />
+							&lt;au-marquee speed="3" direction="'right'"&gt;Two AU-Marquees on the same line&lt;/au-marquee&gt;&lt;au-marquee speed="3" direction="'left'"&gt;Another AU-Marquee on the same line&lt;/au-marquee&gt;<br />
+						</code>
+					</div>
+				</div>
+				<h2>Attributes</h2>
+				<table class="table table-bordered">
+					<tr>
+						<th>Name</th><th>Type</th><th>Valid Input</th><th>Description</th>
+					</tr>
+					<tr>
+						<td><code>speed</code></td><td>Number</td><td>Any number.</td><td>Higher numbers mean a greater speed at which the element will scroll.</td>
+					</tr>
+					<tr>
+						<td><code>direction</code></td><td>String</td><td><code>'left'</code> or <code>'right'</code> accepted only.</td><td>The direction in which the element will scroll.</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
