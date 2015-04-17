@@ -1,5 +1,4 @@
 var express = require('express');
-var pkg = require('./package');
 var app = express();
 
 app.use("/", express.static(__dirname + '/examples'));
