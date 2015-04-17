@@ -18,7 +18,7 @@
 			uglify: {
 		      target: {
 		        files: {
-		          './dist/js/awesome-ui.min.js': ['./dist/awesome-ui.js']
+		          './dist/awesome-ui.min.js': ['./dist/awesome-ui.js']
 		        }
 		      }
 		    },
