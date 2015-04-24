@@ -76,7 +76,7 @@
 				<!-- Spinner -->
 				<h1 id="spinner" class="page-header">Spinner</h1>
 				<p class="lead">
-					Use the Spinner directive to spin content clockwise or anti-clockwise. Like a really cool dreidel!
+					Use the Spinner directive to spin content clockwise or anti-clockwise. Dreidel, dreidel, dreidel!
 				</p>
 				<h2>Example</h2>
 				<p>
@@ -94,7 +94,7 @@
 					<code>
 						&lt;au-spinner speed="3" direction="'clockwise'"&gt;Spinning one way!&lt;/au-spinner&gt;<br />
 						&lt;au-spinner speed="6" direction="'anti-clockwise'"&gt;Spinning faster the other way!&lt;/au-spinner&gt;<br />
-						&lt;au-spinner speed="3" direction="'clockwise'"&gt;&lt;img src="favicon.crush.png" /&gt;&lt;/au-spinner&gt;<br />
+						&lt;au-spinner speed="3" direction="'clockwise'"&gt;&lt;img src="favicon.crush.png"/&gt;&lt;/au-spinner&gt;<br />
 					</code>	
 				</div>
 
@@ -110,7 +110,45 @@
 						<td><code>direction</code></td><td>String</td><td><code>'clockwise'</code> or <code>'anti-clockwise'</code> accepted only.</td><td>The direction in which the element will scroll.</td>
 					</tr>
 				</table>
+				<!-- Seesaw -->
+				<h1 id="seesaw" class="page-header">Seesaw</h1>
+				<p class="lead">
+					The Seesaw directive lets you teeter elements back and forth. It's like the end of the Italian Job!
+				</p>
+				<h2>Example</h2>
+				<p>
+					Use the <code>&lt;au-seesaw&gt;</code> along with a <code>speed</code> and a <code>rotation-limit</code> attribute to get a seesawing element. The attributes both take numbers. You can even use images inside this directive.
+				</p>
 
+				<hr />
+					<au-seesaw speed="3" rotation-limit="45">Whooooaaaaaa!</au-seesaw>
+					<au-seesaw speed="6" rotation-limit="180">Full circle! Cool!</au-seesaw>
+					<au-seesaw speed="1" rotation-limit="360">Slow double flip! Yeah!</au-seesaw>
+					<au-seesaw speed="3" rotation-limit="30"><img src="favicon.crush.png" /></au-seesaw>
+				<hr />
+
+				<div class="well well-sm">
+					<h6>EXAMPLE</h6>
+					<code>
+						&lt;au-seesaw speed="3" rotation-limit="45"&gt;Whooooaaaaaa!&lt;/au-seesaw&gt;<br />
+						&lt;au-seesaw speed="6" rotation-limit="180"&gt;Full circle! Cool!&lt;/au-seesaw&gt;<br />
+						&lt;au-seesaw speed="1" rotation-limit="360"&gt;Slow double flip! Yeah!&lt;/au-seesaw&gt;<br />
+						&lt;au-seesaw speed="3" rotation-limit="30"&gt;&lt;img src="favicon.crush.png" /&gt;&lt;/au-seesaw&gt;<br />
+					</code>	
+				</div>
+
+				<h2>Attributes</h2>
+				<table class="table table-bordered">
+					<tr>
+						<th>Name</th><th>Type</th><th>Valid Input</th><th>Description</th>
+					</tr>
+					<tr>
+						<td><code>speed</code></td><td>Number</td><td>Any number.</td><td>Higher numbers mean a greater speed at which the element will scroll.</td>
+					</tr>
+					<tr>
+						<td><code>rotation-limit</code></td><td>Number</td><td>Any number.</td><td>The limit the rotation will reach, both above and below zero. E.g.: 90 will stop the rotation at +90 as well as -90 degrees.</td>
+					</tr>
+				</table>
 			</div>
 		</div>
 	</div>
