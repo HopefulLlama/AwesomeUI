@@ -1,1 +1,1 @@
-angular.module("awesome.ui", ["awesome.ui.marquee", "awesome.ui.seesaw", "awesome.ui.spinner"]);
+angular.module("awesome.ui", ["awesome.ui.blinker", "awesome.ui.marquee", "awesome.ui.seesaw", "awesome.ui.spinner"]);

@@ -29,7 +29,6 @@ angular.module('awesome.ui.seesaw', [])
             scope.rotationIncrementing = true;
           }
         }
-        console.log(scope.rotation);
         scope.seesawContent.style.transform = "rotate("+scope.rotation+"deg)";
       }, 30);
     }

@@ -34,6 +34,41 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
+				<!-- Blinker -->
+				<h1 id="blinker" class="page-header">Blinker</h1>
+				<p class="lead">
+					Use the Blinker directive to flash elements continuously. Circa spam adverts 1980's - 2000's!
+				</p>
+				<h2>Example</h2>
+				<p>
+					Use the <code>&lt;au-blinker&gt;</code> along with a <code>refresh-rate</code> get a flashing element. The attribute takes a number; a minimum value of <code>150</code> is recommended. 
+				</p>
+
+				<hr />
+				<button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#blinkerCollapsePanel" aria-example="false" aria-controls="blinkerCollapsePanel">The Au-Blinker element flashes on and off repeatedly. Please ensure you understand the health risks going ahead. <u>Click</u> to display Au-Blinker examples.</button>
+				<div class="collapse" id="blinkerCollapsePanel">
+					<au-blinker refresh-rate="150">150 Refresh rate blinker!</au-blinker>
+					<au-blinker refresh-rate="600">600 Refresh rate blinker!</au-blinker>
+					<au-blinker refresh-rate="300"><img src="favicon.crush.png" /></au-blinker>
+				</div>
+				<hr />
+				<div class="well well-sm">
+					<h6>EXAMPLE</h6>
+					<code>
+						&lt;au-blinker refresh-rate="150"&gt;150 Refresh rate blinker!&lt;/au-blinker&gt;&lt;br/&gt;<br />
+						&lt;au-blinker refresh-rate="600"&gt;600 Refresh rate blinker!&lt;/au-blinker&gt;&lt;br/&gt;<br />
+						&lt;au-blinker refresh-rate="300"&gt;&lt;img src="favicon.crush.png" /&gt;&lt;/au-blinker&gt;&lt;br/&gt;<br />
+					</code>	
+				</div>
+				<h2>Attributes</h2>
+				<table class="table table-bordered">
+					<tr>
+						<th>Name</th><th>Type</th><th>Valid Input</th><th>Description</th>
+					</tr>
+					<tr>
+						<td><code>refresh-rate</code></td><td>Number</td><td>Any number.</td><td>Higher numbers mean a slower speed at which the element will flash. A minimum of <code>150</code> is recommended.</td>
+					</tr>
+				</table>
 
 				<!-- Marquee -->
 				<h1 id="marquee" class="page-header">Marquee</h1>
