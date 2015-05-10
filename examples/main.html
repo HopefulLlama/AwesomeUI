@@ -106,6 +106,39 @@
 					</tr>
 				</table>
 
+				<!-- Flipper -->
+				<h1 id="flipper" class="page-header">Flipper</h1>
+				<p class="lead">
+					Use the Flipper directive to flip elements continuously. You're the man now, dog!
+				</p>
+				<h2>Example</h2>
+				<p>
+					Use the <code>&lt;au-flipper&gt;</code> along with a <code>refresh-rate</code> get a flipping element. The attribute takes a number; a minimum value of <code>150</code> is recommended. 
+				</p>
+
+				<hr />
+					<au-flipper refresh-rate="150">150 Refresh rate flipper!</au-flipper>
+					<au-flipper refresh-rate="600">600 Refresh rate flipper!</au-flipper>
+					<au-flipper refresh-rate="300"><img src="favicon.crush.png" /></au-flipper>
+				<hr />
+				<div class="well well-sm">
+					<h6>EXAMPLE</h6>
+					<code>
+						&lt;au-flipper refresh-rate="150"&gt;150 Refresh rate flipper!&lt;/au-flipper&gt;<br />
+						&lt;au-flipper refresh-rate="600"&gt;600 Refresh rate flipper!&lt;/au-flipper&gt;<br />
+						&lt;au-flipper refresh-rate="300"&gt;&lt;img src="favicon.crush.png" /&gt;&lt;/au-flipper&gt;
+					</code>	
+				</div>
+				<h2>Attributes</h2>
+				<table class="table table-bordered">
+					<tr>
+						<th>Name</th><th>Type</th><th>Valid Input</th><th>Description</th>
+					</tr>
+					<tr>
+						<td><code>refresh-rate</code></td><td>Number</td><td>Any number.</td><td>Higher numbers mean a slower speed at which the element will flash. A minimum of <code>150</code> is recommended.</td>
+					</tr>
+				</table>
+
 				<!-- Marquee -->
 				<h1 id="marquee" class="page-header">Marquee</h1>
 				<p class="lead">
