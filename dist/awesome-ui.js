@@ -1,4 +1,4 @@
-angular.module("awesome.ui", ["awesome.ui.blinker", "awesome.ui.marquee", "awesome.ui.seesaw", "awesome.ui.spinner"]);
+angular.module("awesome.ui", ["awesome.ui.blinker", "awesome.ui.chimichanga", "awesome.ui.marquee", "awesome.ui.seesaw", "awesome.ui.spinner"]);
 angular.module('awesome.ui.blinker', [])
 .directive('auBlinker', [function () {
   return {
@@ -21,42 +21,80 @@ angular.module('awesome.ui.blinker', [])
   }
 };
 }]);
+angular.module('awesome.ui.chimichanga', [])
+.directive('auChimichanga', [function () {
+  return {
+    restrict:'E',
+    scope: {
+      distance: '=',
+      speed: '='
+    },
+    transclude: true,
+    template: '<span class="chimichanga-content" ng-transclude></span>',
+    link: function (scope, element, attrs) {
+      scope.chimichangaContent = element[0].querySelector('.chimichanga-content');
+      scope.chimichangaContent.style.display = "inline-block";
+      scope.offset = 0;
+
+      scope.chimichangaContent.style.position = "relative";
+      scope.chimichangaContent.style.left = scope.offset + "px";
+
+      scope.direction = 'left';
+
+      var id = setInterval(function() {
+        if(scope.direction == 'left') {
+          if(scope.offset <= 0-scope.distance) {
+            scope.direction = 'right';
+          } else {
+            scope.offset -= scope.speed;
+          }
+        } else if (scope.direction == 'right') {
+          if(scope.offset >= scope.distance) {
+            scope.direction = 'left';
+          } else {
+            scope.offset += scope.speed;
+          }
+        }
+        scope.chimichangaContent.style.left = scope.offset + "px";
+      }, 30);
+    }
+  };
+}]);
 angular.module('awesome.ui.marquee', [])
 .directive('auMarquee', [function () {
   return {
     restrict:'E',
     scope: {
-     direction: '=',
-     speed: '='
-   },
-   link: function (scope, element, attrs) {
-     scope.offset = 0;
+      direction: '=',
+      speed: '='
+    },
+    link: function (scope, element, attrs) {
+      scope.offset = 0;
 
-     element.context.style.position = "relative";
-     element.context.style.left = scope.offset + "px";
+      element.context.style.position = "relative";
+      element.context.style.left = scope.offset + "px";
+      scope.originalOffset = element[0].getBoundingClientRect().left;
 
-     scope.originalOffset = element[0].getBoundingClientRect().left;
-
-     var id = setInterval(function() {
-      if(scope.direction == 'right') {
-       if(element[0].getBoundingClientRect().left >= window.innerWidth) {
-         element.context.style.left = "0px";
-         scope.originalOffset = element[0].getBoundingClientRect().left;
-         scope.offset = 0 - scope.originalOffset - element.width();
-       }
-       scope.offset += scope.speed;
-     } else if (scope.direction == 'left') {
-       if(element[0].getBoundingClientRect().left <= 0 - element.width()) {
-        element.context.style.left = "0px";
-        scope.originalOffset = element[0].getBoundingClientRect().left;
-        scope.offset = window.innerWidth - scope.originalOffset;
-      }
-      scope.offset -= scope.speed;
-    }	
-    element.context.style.left = scope.offset + "px";
-  }, 30);
-   }
- };
+      var id = setInterval(function() {
+        if(scope.direction == 'right') {
+          if(element[0].getBoundingClientRect().left >= window.innerWidth) {
+            element.context.style.left = "0px";
+            scope.originalOffset = element[0].getBoundingClientRect().left;
+            scope.offset = 0 - scope.originalOffset - element.width();
+          }
+          scope.offset += scope.speed;
+        } else if (scope.direction == 'left') {
+          if(element[0].getBoundingClientRect().left <= 0 - element.width()) {
+            element.context.style.left = "0px";
+            scope.originalOffset = element[0].getBoundingClientRect().left;
+            scope.offset = window.innerWidth - scope.originalOffset;
+          }
+          scope.offset -= scope.speed;
+        }	
+        element.context.style.left = scope.offset + "px";
+      }, 30);
+    }
+  };
 }]);
 angular.module('awesome.ui.seesaw', [])
 .directive('auSeesaw', [function () {

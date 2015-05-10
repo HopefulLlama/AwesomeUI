@@ -18,19 +18,19 @@
 </head>
 <body ng-app="myApp" ng-controller="ExampleController">	
 	<nav class="no-bottom-margin navbar navbar-default">
-	  	<div class="container">
-	    	<!-- Brand and toggle get grouped for better mobile display -->
-	    	<div class="navbar-header">
-	      		<a class="navbar-brand" href="#">AwesomeUI</a>
-	    	</div>
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">AwesomeUI</a>
+			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
 	<div class="jumbotron customtron">
 		<div class="container">
-  			<h1>AwesomeUI</h1>
-  			<p>AngularJS directives to help create an AwesomeUI for your web page. Get ahead of your competitors instantly!</p>
+			<h1>AwesomeUI</h1>
+			<p>AngularJS directives to help create an AwesomeUI for your web page. Get ahead of your competitors instantly!</p>
 		</div>
-  	</div>
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -67,6 +67,42 @@
 					</tr>
 					<tr>
 						<td><code>refresh-rate</code></td><td>Number</td><td>Any number.</td><td>Higher numbers mean a slower speed at which the element will flash. A minimum of <code>150</code> is recommended.</td>
+					</tr>
+				</table>
+
+				<!-- Chimichanga -->
+				<h1 id="chimichanga" class="page-header">Chimichanga</h1>
+				<p class="lead">
+					Use the Chimichanga directive to get elements do the Chimichanga. Shake that thang!
+				</p>
+				<h2>Example</h2>
+				<p>
+					Use the <code>&lt;au-chimichanga&gt;</code> along with a <code>speed</code> and <code>distance</code> to get a dancing element. Both attributes take a number.
+				</p>
+
+				<hr />
+					<au-chimichanga speed="1" distance="10">Short, slow Chimichanga</au-chimichanga>
+					<au-chimichanga speed="5" distance="100">Fast, long Chimichanga!</au-chimichanga>
+					<au-chimichanga speed="10" distance="50"><img src="favicon.crush.png" /></au-chimichanga>
+				<hr />
+				<div class="well well-sm">
+					<h6>EXAMPLE</h6>
+					<code>
+						&lt;au-chimichanga speed="1" distance="10"&gt;Short, slow Chimichanga&lt;/au-chimichanga&gt;<br />
+						&lt;au-chimichanga speed="5" distance="100"&gt;Fast, long Chimichanga!&lt;/au-chimichanga&gt;<br />
+						&lt;au-chimichanga speed="10" distance="50"&gt;&lt;img src="favicon.crush.png" /&gt;&lt;/au-chimichanga&gt;
+					</code>	
+				</div>
+				<h2>Attributes</h2>
+				<table class="table table-bordered">
+					<tr>
+						<th>Name</th><th>Type</th><th>Valid Input</th><th>Description</th>
+					</tr>
+					<tr>
+						<td><code>speed</code></td><td>Number</td><td>Any number.</td><td>Higher numbers mean a faster speed at which the element will travel.</td>
+					</tr>
+					<tr>
+						<td><code>distance</code></td><td>Number</td><td>Any number.</td><td>This signifies the distance from the starting point which the element will travel, before changing directions. Greater numbers mean greater distances.</td>
 					</tr>
 				</table>
 
@@ -120,10 +156,10 @@
 				</p>
 
 				<hr />
-					<au-seesaw speed="3" rotation-limit="45">Whooooaaaaaa!</au-seesaw>
-					<au-seesaw speed="6" rotation-limit="180">Full circle! Cool!</au-seesaw>
-					<au-seesaw speed="1" rotation-limit="360">Slow double flip! Yeah!</au-seesaw>
-					<au-seesaw speed="3" rotation-limit="30"><img src="favicon.crush.png" /></au-seesaw>
+				<au-seesaw speed="3" rotation-limit="45">Whooooaaaaaa!</au-seesaw>
+				<au-seesaw speed="6" rotation-limit="180">Full circle! Cool!</au-seesaw>
+				<au-seesaw speed="1" rotation-limit="360">Slow double flip! Yeah!</au-seesaw>
+				<au-seesaw speed="3" rotation-limit="30"><img src="favicon.crush.png" /></au-seesaw>
 				<hr />
 
 				<div class="well well-sm">
@@ -159,9 +195,9 @@
 				</p>
 
 				<hr />
-					<au-spinner speed="3" direction="'clockwise'">Spinning one way!</au-spinner>
-					<au-spinner speed="6" direction="'anti-clockwise'">Spinning faster the other way!</au-spinner>
-					<au-spinner speed="3" direction="'clockwise'"><img src="favicon.crush.png" /></au-spinner>
+				<au-spinner speed="3" direction="'clockwise'">Spinning one way!</au-spinner>
+				<au-spinner speed="6" direction="'anti-clockwise'">Spinning faster the other way!</au-spinner>
+				<au-spinner speed="3" direction="'clockwise'"><img src="favicon.crush.png" /></au-spinner>
 				<hr />
 
 				<div class="well well-sm">
