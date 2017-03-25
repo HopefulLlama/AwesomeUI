@@ -6,30 +6,35 @@ angular.module('awesome.ui.marquee', [])
       direction: '=',
       speed: '='
     },
+    transclude: true,
+    template: '<span class="marquee-content" ng-transclude></span>',
     link: function (scope, element, attrs) {
+      scope.marqueeContent = element[0].querySelector('.marquee-content');
+
+      scope.marqueeContent.style.display = "inline-block";
       scope.offset = 0;
 
-      element.context.style.position = "relative";
-      element.context.style.left = scope.offset + "px";
-      scope.originalOffset = element[0].getBoundingClientRect().left;
+      scope.marqueeContent.style.position = "relative";
+      scope.marqueeContent.style.left = scope.offset + "px";
+      scope.originalOffset = scope.marqueeContent.getBoundingClientRect().left;
 
       var id = setInterval(function() {
         if(scope.direction == 'right') {
-          if(element[0].getBoundingClientRect().left >= window.innerWidth) {
-            element.context.style.left = "0px";
-            scope.originalOffset = element[0].getBoundingClientRect().left;
-            scope.offset = 0 - scope.originalOffset - element.width();
+          if(scope.marqueeContent.getBoundingClientRect().left >= window.innerWidth) {
+            scope.marqueeContent.style.left = "0px";
+            scope.originalOffset = scope.marqueeContent.getBoundingClientRect().left;
+            scope.offset = 0 - scope.originalOffset - scope.marqueeContent.getBoundingClientRect().width;
           }
           scope.offset += scope.speed;
         } else if (scope.direction == 'left') {
-          if(element[0].getBoundingClientRect().left <= 0 - element.width()) {
-            element.context.style.left = "0px";
-            scope.originalOffset = element[0].getBoundingClientRect().left;
+          if(scope.marqueeContent.getBoundingClientRect().left <= 0 - scope.marqueeContent.getBoundingClientRect().width) {
+            scope.marqueeContent.style.left = "0px";
+            scope.originalOffset = scope.marqueeContent.getBoundingClientRect().left;
             scope.offset = window.innerWidth - scope.originalOffset;
           }
           scope.offset -= scope.speed;
         }	
-        element.context.style.left = scope.offset + "px";
+        scope.marqueeContent.style.left = scope.offset + "px";
       }, 30);
     }
   };
