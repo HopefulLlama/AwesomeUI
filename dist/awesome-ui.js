@@ -110,7 +110,6 @@ angular.module('awesome.ui.marquee', [])
     link: function (scope, element, attrs) {
       scope.marqueeContent = element[0].querySelector('.marquee-content');
 
-      scope.marqueeContent.style.display = "inline-block";
       scope.offset = 0;
 
       scope.marqueeContent.style.position = "relative";
